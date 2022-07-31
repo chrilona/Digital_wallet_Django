@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Account, Customer, Notification, Receipt, Thirdparty, Transaction, Wallet,Account,Card,Thirdparty,Notification,Receipt,Loan,Reward
+from .models import Account, Customer, Notification, Receipt,Transaction, Wallet,Card,Thirdparty,Notification,Receipt,Loan,Reward
 
 class CustomerAdmin(admin.ModelAdmin):
-    list_display= ("firstname","lastname","adress",)
+    list_display= ("firstname","lastname","address",)
     search_fields= ("firstname","lastname",)
 
 admin.site.register(Customer,CustomerAdmin)
