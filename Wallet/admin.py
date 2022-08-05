@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Account, Customer, Notification, Receipt,Transaction, Wallet,Card,Thirdparty,Notification,Receipt,Loan,Reward
+from .models import Account, Customer, Receipt,Transaction, Wallet,Card,Thirdparty,Notification,Loan,Reward
 
 class CustomerAdmin(admin.ModelAdmin):
     list_display= ("firstname","lastname","address",)
