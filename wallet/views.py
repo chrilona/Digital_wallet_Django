@@ -6,39 +6,39 @@ def register_customer(request):
     return render(request,"wallet/register_customer.html" ,{"form":form})
 
 def register_wallet(request):
-    wallett = WalletRegistrationForm()
-    return render(request,"wallet/register_wallet.html" ,{"form":wallett})
+    form = WalletRegistrationForm()
+    return render(request,"wallet/register_wallet.html" ,{"form":form})
 
 def register_account(request):
-    account = AccountRegistrationForm()
-    return render(request,"wallet/register_account.html" ,{"form":account})
+    form = AccountRegistrationForm()
+    return render(request,"wallet/register_account.html" ,{"form":form})
 
 def register_receipt(request):
-    receipt = ReceiptRegistrationForm()
-    return render(request,"wallet/register_receipt.html" ,{"form":receipt})
+    form = ReceiptRegistrationForm()
+    return render(request,"wallet/register_receipt.html" ,{"form":form})
 
 def register_transaction(request):
-    transaction = TransactionRegistrationForm()
-    return render(request,"wallet/register_transaction.html" ,{"form":transaction})
+    form = TransactionRegistrationForm()
+    return render(request,"wallet/register_transaction.html" ,{"form":form})
 
 def register_card(request):
-    card = CardRegistrationForm()
-    return render(request,"wallet/register_card.html" ,{"form":card})
+    form = CardRegistrationForm()
+    return render(request,"wallet/register_card.html" ,{"form":form})
 
 def register_thirdparty(request):
-    thirdparty = ThirdpartyRegistrationForm()
-    return render(request,"wallet/register_thirdparty.html" ,{"form":thirdparty})
+    form = ThirdpartyRegistrationForm()
+    return render(request,"wallet/register_thirdparty.html" ,{"form":form})
 
 def register_notification(request):
-    note = NotificationRegistrationForm()
-    return render(request,"wallet/register_notification.html" ,{"form":note})
+    form = NotificationRegistrationForm()
+    return render(request,"wallet/register_notification.html" ,{"form":form})
 
 def register_loan(request):
-    loan = LoanRegistrationForm()
-    return render(request,"wallet/register_loan.html" ,{"form":loan})
+    form = LoanRegistrationForm()
+    return render(request,"wallet/register_loan.html" ,{"form":form})
 
 def register_reward(request):
-    reward = RewardRegistrationForm()
-    return render(request,"wallet/register_reward.html" ,{"form":reward})
+    form = RewardRegistrationForm()
+    return render(request,"wallet/register_reward.html" ,{"form":form})
 
 # Create your views here.

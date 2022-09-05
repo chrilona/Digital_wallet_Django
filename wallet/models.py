@@ -9,7 +9,7 @@ class Customer(models.Model):
     address=models.CharField(default=1,max_length=100,null=True)
     emails=models.EmailField(max_length=30,null=True)
     phonenumber=models.CharField(max_length=10,null=True)
-    age=models.IntegerField(max_length=5,null=True)
+    age=models.IntegerField(null=True)
     gender_choices=(
         ("M" ,"Male"),
         ("F","Female")
