@@ -1,0 +1,21 @@
+<table>
+    <th>
+        <td>Serial Number</td> 
+        <td>Card Issue Date</td>
+        <td>Expiry Date</td>
+        <td>Card Signature</td>
+        <td>Related Account</td>
+        <td>Related Wallet</td>
+        <td>Card Issuer</td>
+    </th>
+   
+<tr> {% for card in Card %}</tr>
+<td>{{ card.serial_number}}</td>
+<td>{{ card.date_issued}}</td>
+<td>{{ card.expiry_date}}</td>
+<td>{{ card.signature}}</td>
+<td>{{ card.account}}</td>
+<td>{{ card.wallet}}</td>
+<td>{{ card.issuer}}</td>
+{%endfor%}
+</table>

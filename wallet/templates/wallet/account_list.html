@@ -1,0 +1,19 @@
+<table>
+    <th>
+        <td>Account Number</td> 
+        <td>Account Name</td>
+        <td>Account Type</td>
+        <td>Account Password</td>
+        <td>Account Balance</td>
+        <td>Related Wallet</td>
+    </th>
+   
+<tr> {% for account  in Account %}</tr>
+<td>{{ account.account_number}}</td>
+<td>{{ account.account_name}}</td>
+<td>{{ account.account_type}}</td>
+<td>{{ account.password}}</td>
+<td>{{ account.balance}}</td>
+<td>{{ account.wallet}}</td>
+{%endfor%}
+</table>

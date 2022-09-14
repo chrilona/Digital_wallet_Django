@@ -1,0 +1,15 @@
+<table>
+    <th>
+        <td>Date Of Reward</td> 
+        <td>Description</td>
+        <td>Reward points</td>
+        <td>Related Wallet</td>
+    </th>
+   
+<tr> {% for reward in Reward %}</tr>
+<td>{{ reward.date_of_reward}}</td>
+<td>{{ reward.description_of_reward}}</td>
+<td>{{ reward.reward_points}}</td>
+<td>{{ reward.wallet}}</td>
+{%endfor%}
+</table>
