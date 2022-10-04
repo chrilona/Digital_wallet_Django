@@ -1,15 +1,37 @@
-<table>
-    <th>
-        <td>Serial Number</td> 
-        <td>Card Issue Date</td>
-        <td>Expiry Date</td>
-        <td>Card Signature</td>
-        <td>Related Account</td>
-        <td>Related Wallet</td>
-        <td>Card Issuer</td>
-    </th>
-   
-<tr> {% for card in Card %}</tr>
+<style>
+    #mytable {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #mytable td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #staffInfo tr {background-color: #C5B4E3;}
+      #mytable tr:hover {background-color:pink;}
+      #mytable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #AA336A;
+        color: white;
+      }
+</style>
+
+
+<table id="mytable">
+    <tr>
+        <th>Serial Number</th> 
+        <th>Card Issue Date</th>
+        <th>Expiry Date</th>
+        <th>Card Signature</th>
+        <th>Related Account</th>
+        <th>Related Wallet</th>
+        <th>Card Issuer</th>
+    </tr>
+    {% for card in Card %} 
+<tr> 
 <td>{{ card.serial_number}}</td>
 <td>{{ card.date_issued}}</td>
 <td>{{ card.expiry_date}}</td>
@@ -17,5 +39,6 @@
 <td>{{ card.account}}</td>
 <td>{{ card.wallet}}</td>
 <td>{{ card.issuer}}</td>
+</tr>
 {%endfor%}
 </table>

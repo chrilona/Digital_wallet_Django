@@ -1,15 +1,35 @@
-<table>
-    <th>
-        <td>Transaction Code</td> 
-        <td>Amount</td>
-        <td>Transaction charges</td>
-        <td>Transaction time</td>
-        <td>Tranferring Account</td>
-        <td>Receiving Account</td>
-        <td>Receipt</td>
-    </th>
-   
-<tr> {% for transaction in Transaction %}</tr>
+<style>
+    #mytable {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #mytable td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #staffInfo tr {background-color: #C5B4E3;}
+      #mytable tr:hover {background-color:pink;}
+      #mytable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #AA336A;
+        color: white;
+      }
+</style>
+<table id="mytable">
+    <tr>
+        <th>Transaction Code</th> 
+        <th>Amount</th>
+        <th>Transaction charges</th>
+        <th>Transaction time</th>
+        <th>Tranferring Account</th>
+        <th>Receiving Account</th>
+        <th>Receipt</th>
+    </tr>
+    {% for transaction in Transaction %}
+<tr>
 <td>{{ transaction.transaction_code}}</td>
 <td>{{ transaction.transaction_amount}}</td>
 <td>{{ transaction.transaction_charges}}</td>
@@ -17,5 +37,6 @@
 <td>{{ transaction.origin_account}}</td>
 <td>{{ transaction.destination_account}}</td>
 <td>{{ transaction.receipt}}</td>
+</tr>
 {%endfor%}
 </table>

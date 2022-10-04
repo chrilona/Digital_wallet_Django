@@ -1,15 +1,36 @@
-<table>
-    <th>
-        <td>Name</td> 
-        <td>Currency</td>
-        <td>Transaction</td>
-        <td>Account</td>
-    </th>
-   
-<tr> {% for thirdparty in Thirdparty %}</tr>
+<style>
+    #mytable {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #mytable td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #staffInfo tr {background-color: #C5B4E3;}
+      #mytable tr:hover {background-color:pink;}
+      #mytable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #AA336A;
+        color: white;
+      }
+</style>
+<table id="mytable">
+    <tr>
+        <th>Name</th> 
+        <th>Currency</th>
+        <th>Transaction</th>
+        <th>Account</th>
+    </tr>
+    {% for thirdparty in Thirdparty %} 
+<tr> 
 <td>{{ thirdparty.name}}</td>
 <td>{{ thirdparty.currency}}</td>
 <td>{{ thirdparty.transaction}}</td>
 <td>{{ thirdparty.account}}</td>
+</tr>
 {%endfor%}
 </table>

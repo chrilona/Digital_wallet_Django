@@ -15,7 +15,7 @@ class Customer(models.Model):
         ("F","Female")
     )
     gender=models.CharField(max_length=1,choices=gender_choices,null=True)
-    # profile_picture=models.ImageField(upload_to='profile_picture/')
+    profile_picture=models.ImageField(upload_to='profile_picture/',null=True)
 
     # def __str__(self):
     #     return self.firstname

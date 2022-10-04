@@ -1,15 +1,36 @@
-<table>
-    <th>
-        <td>Date Of Reward</td> 
-        <td>Description</td>
-        <td>Reward points</td>
-        <td>Related Wallet</td>
-    </th>
-   
-<tr> {% for reward in Reward %}</tr>
+<style>
+    #mytable {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #mytable td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #staffInfo tr {background-color: #C5B4E3;}
+      #mytable tr:hover {background-color:pink;}
+      #mytable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #AA336A;
+        color: white;
+      }
+</style>
+<table id="mytable">
+    <tr>
+        <th>Date Of Reward</th> 
+        <th>Description</th>
+        <th>Reward points</th>
+        <th>Related Wallet</th>
+    </tr>
+    {% for reward in Reward %}  
+<tr> 
 <td>{{ reward.date_of_reward}}</td>
 <td>{{ reward.description_of_reward}}</td>
 <td>{{ reward.reward_points}}</td>
 <td>{{ reward.wallet}}</td>
+</tr>
 {%endfor%}
 </table>

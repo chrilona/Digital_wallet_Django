@@ -1,19 +1,20 @@
 <table>
     <th>
-        <td>Receipt Date</td> 
-        <td>Description</td>
-        <td>Receipt Name</td>
-        <td>Balance</td>
-        <td>Amount Sent</td>
-        <td>Information File</td>
+        <td>receipt_date</td> 
+        <td>receipt_descrition</td>
+        <td>name</td>
+        <td>balance</td>
+        <td>amount</td>
+        <td>file</td>
     </th>
-   
-<tr> {% for receipt in Receipt %}</tr>
+    {% for receipt in receipts %}
+<tr> 
 <td>{{ receipt.receipt_date}}</td>
 <td>{{ receipt.receipt_descrition}}</td>
 <td>{{ receipt.name}}</td>
 <td>{{ receipt.balance}}</td>
 <td>{{ receipt.amount}}</td>
 <td>{{ receipt.file}}</td>
+</tr>
 {%endfor%}
 </table>

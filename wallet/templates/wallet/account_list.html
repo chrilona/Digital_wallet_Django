@@ -1,19 +1,40 @@
-<table>
-    <th>
-        <td>Account Number</td> 
-        <td>Account Name</td>
-        <td>Account Type</td>
-        <td>Account Password</td>
-        <td>Account Balance</td>
-        <td>Related Wallet</td>
-    </th>
-   
-<tr> {% for account  in Account %}</tr>
+<style>
+    #mytable {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #mytable td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #staffInfo tr {background-color: #C5B4E3;}
+      #mytable tr:hover {background-color:pink;}
+      #mytable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #AA336A;
+        color: white;
+      }
+</style>
+<table id="mytable">
+    <tr>
+        <th>Account Number</th> 
+        <th>Account Name</th>
+        <th>Account Type</th>
+        <th>Account Password</th>
+        <th>Account Balance</th>
+        <th>Related Wallet</th>
+    </tr>
+    {% for account  in Account %}
+<tr> 
 <td>{{ account.account_number}}</td>
 <td>{{ account.account_name}}</td>
 <td>{{ account.account_type}}</td>
 <td>{{ account.password}}</td>
 <td>{{ account.balance}}</td>
 <td>{{ account.wallet}}</td>
+</tr>
 {%endfor%}
 </table>
