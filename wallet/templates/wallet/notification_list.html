@@ -33,6 +33,8 @@
 <td>{{ notification.recipient}}</td>
 <td>{{ notification.read_unread_status}}</td>
 <td>{{ notification.date_and_time}}</td>
+<td><a href ="{%url 'notification_profile' id=notification.id%}">View profile</a></td>
+
 </tr>
 {%endfor%}
 </table>

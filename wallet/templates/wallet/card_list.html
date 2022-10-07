@@ -29,6 +29,7 @@
         <th>Related Account</th>
         <th>Related Wallet</th>
         <th>Card Issuer</th>
+        <th>View profile</th>
     </tr>
     {% for card in Card %} 
 <tr> 
@@ -39,6 +40,8 @@
 <td>{{ card.account}}</td>
 <td>{{ card.wallet}}</td>
 <td>{{ card.issuer}}</td>
+<td><a href ="{%url 'card_profile' id=card.id%}">View profile</a></td>
+
 </tr>
 {%endfor%}
 </table>

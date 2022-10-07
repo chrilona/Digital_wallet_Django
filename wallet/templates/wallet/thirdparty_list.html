@@ -24,6 +24,7 @@
         <th>Currency</th>
         <th>Transaction</th>
         <th>Account</th>
+        <th>View Profile</th>
     </tr>
     {% for thirdparty in Thirdparty %} 
 <tr> 
@@ -31,6 +32,8 @@
 <td>{{ thirdparty.currency}}</td>
 <td>{{ thirdparty.transaction}}</td>
 <td>{{ thirdparty.account}}</td>
+<td><a href ="{%url 'thirdparty_profile' id=thirdparty.id%}">View profile</a></td>
+
 </tr>
 {%endfor%}
 </table>

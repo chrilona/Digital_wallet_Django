@@ -24,6 +24,7 @@
         <th>Description</th>
         <th>Reward points</th>
         <th>Related Wallet</th>
+        <th>View profile</th>
     </tr>
     {% for reward in Reward %}  
 <tr> 
@@ -31,6 +32,8 @@
 <td>{{ reward.description_of_reward}}</td>
 <td>{{ reward.reward_points}}</td>
 <td>{{ reward.wallet}}</td>
+<td><a href ="{%url 'reward_profile' id=reward.id%}">View profile</a></td>
+
 </tr>
 {%endfor%}
 </table>

@@ -1,12 +1,32 @@
-<table>
-    <th>
-        <td>receipt_date</td> 
-        <td>receipt_descrition</td>
-        <td>name</td>
-        <td>balance</td>
-        <td>amount</td>
-        <td>file</td>
-    </th>
+<style>
+    #mytable {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #mytable td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #mytable tr:hover {background-color:pink;}
+      #mytable tr td {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #AA336A;
+        color: white;
+      }
+</style>
+<table id="mytable">
+  <tr> 
+     <td>Receipt Date </td> 
+      <td>Receipt Description</td>
+      <td>Receipt Name</td>
+      <td> Balance</td>
+      <td>Receipt Amount</td>
+      <td>Related File</td>
+      <td>View profile</td>
+    
     {% for receipt in receipts %}
 <tr> 
 <td>{{ receipt.receipt_date}}</td>
@@ -15,6 +35,8 @@
 <td>{{ receipt.balance}}</td>
 <td>{{ receipt.amount}}</td>
 <td>{{ receipt.file}}</td>
+<td><a href ="{%url 'receipt_profile' id=receipt.id%}">View profile</a></td>
+
 </tr>
 {%endfor%}
 </table>

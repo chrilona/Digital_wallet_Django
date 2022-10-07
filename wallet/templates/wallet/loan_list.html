@@ -17,6 +17,7 @@
         background-color: #AA336A;
         color: white;
       }
+      
 </style>
 <table id="=mytable">
     <tr>
@@ -31,20 +32,22 @@
         <th>Loan Balance</th>
         <th>Loan Interest Rate</th>
         <th>Loan Guarantors</th>
+        <th>View Profile</th>
     </tr>
-    {% for loan in Loan %}
+   <tb> {% for loans in Loan %}</tb>
 <tr> 
-<td>{{ loan.loan_id}}</td>
-<td>{{ loan.loan_type}}</td>
-<td>{{ loan.loan_status}}</td>
-<td>{{ loan.name}}</td>
-<td>{{ loan.purpose_of_the_loan}}</td>
-<td>{{ loan.wallet}}</td>
-<td>{{ loan.date_issued}}</td>
-<td>{{ loan.personal_due_date}}</td>
-<td>{{ loan.loan_balance}}</td>
-<td>{{ loan.interest_rate}}</td>
-<td>{{ loan.guarantor}}</td>
+<td>{{ loans.loan_id}}</td>
+<td>{{ loans.loan_type}}</td>
+<td>{{ loans.loan_status}}</td>
+<td>{{ loans.name}}</td>
+<td>{{ loans.purpose_of_the_loan}}</td>
+<td>{{ loans.wallet}}</td>
+<td>{{ loans.date_issued}}</td>
+<td>{{ loans.personal_due_date}}</td>
+<td>{{ loans.loan_balance}}</td>
+<td>{{ loans.interest_rate}}</td>
+<td>{{ loans.guarantor}}</td>
+<td><a href ="{%url 'loan_profile' id=loan.id%}">View profile</a></td>3
 </tr>
 {%endfor%}
 </table>

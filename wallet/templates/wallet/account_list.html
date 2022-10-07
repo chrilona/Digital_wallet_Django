@@ -26,6 +26,7 @@
         <th>Account Password</th>
         <th>Account Balance</th>
         <th>Related Wallet</th>
+        <th>View Profile</th>
     </tr>
     {% for account  in Account %}
 <tr> 
@@ -35,6 +36,7 @@
 <td>{{ account.password}}</td>
 <td>{{ account.balance}}</td>
 <td>{{ account.wallet}}</td>
+<td><a href ="{%url 'account_profile' id=account.id%}">View profile</a></td>
 </tr>
 {%endfor%}
 </table>

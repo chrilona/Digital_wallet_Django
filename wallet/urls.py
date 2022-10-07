@@ -1,5 +1,5 @@
 from django.urls import path 
-from .views import account_profile, card_profile, customer_profile, edit_account, edit_card, edit_profile, edit_receipt, edit_transaction, edit_wallet, list_accounts, list_cards, list_loans, list_notifications, list_receipts, list_rewards, list_thirdpartys, list_transactions, list_wallets, receipt_profile, register_account, register_customer,register_card, register_loan, register_notification, register_receipt, register_reward, register_thirdparty, register_transaction, register_wallet,list_customers, transaction_profile, wallet_profile
+from .views import account_profile, card_profile, customer_profile, edit_account, edit_card, edit_profile, edit_receipt, edit_transaction, edit_wallet, list_accounts, list_cards, list_loans, list_notifications, list_receipts, list_rewards, list_thirdpartys, list_transactions, list_wallets, receipt_profile, register_account, register_customer,register_card, register_loan, register_notification, register_receipt, register_reward, register_thirdparty, register_transaction, register_wallet,list_customers, transaction_profile, wallet_profile,list_loans
 
 urlpatterns = [
     path("register/",register_customer,name="registration"),
@@ -20,7 +20,7 @@ urlpatterns = [
     path("cards/",list_cards,name="cards_list"),
     path("thirdpartys/",list_thirdpartys,name="thirdpartys"),  
     path("notifications/",list_notifications,name="notifications_list"),  
-    path("loans/",list_loans,name="loans_list"),
+    path("loans/",list_loans,name="list_loans"),
     path("rewards/",list_rewards,name="rewards_list"),
     
     path("customers/<int:id>/",customer_profile,name="customer_profile"),

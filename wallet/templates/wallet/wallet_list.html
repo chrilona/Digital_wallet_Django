@@ -26,6 +26,7 @@
         <th>Pin</th>
         <th>Currency</th>
         <th>Creation Date</th>
+        <th>View Profile</th>
     </tr>
     {% for wallets in wallet %} 
 <tr> 
@@ -35,6 +36,7 @@
 <td>{{ wallets.pin}}</td>
 <td>{{ wallets.currency}}</td>
 <td>{{ wallets.date_created}}</td>
+<td><a href="{%url 'wallet_profile' id=wallet.id%}">View Profile</a></td>
 </tr>
 {%endfor%}
 </table>

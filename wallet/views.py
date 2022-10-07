@@ -119,8 +119,8 @@ def register_loan(request):
     return render(request,"wallet/register_loan.html" ,{"form":form})
 
 def list_loans(request):
-    loan = models.Loan.objects.all()
-    return render(request,'wallet/loan_list.html',{"Loan":loan})
+    loans = models.Loan.objects.all()
+    return render(request,'wallet/loan_list.html',{"Loan":loans})
 
 def register_reward(request):
     if request.method == "POST":
